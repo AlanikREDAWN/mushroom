@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://8avbawjhc7qs"]
+
+[ext_resource type="Texture2D" uid="uid://dnoipxyc8amfg" path="res://icon.svg" id="1_5be6c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k6jfe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5be6c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="mushroomPlaceholder" type="Node2D" unique_id=158685776]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=559319672]
+sprite_frames = SubResource("SpriteFrames_k6jfe")
