@@ -29,3 +29,4 @@ func _on_hard_pressed() -> void:
 	Global.difficulty = Global.difficultyLevels.HARD
 	Global.point_1 = Vector2(-1920, -1080)
 	Global.point_2 = Vector2(1920, 1080)
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
