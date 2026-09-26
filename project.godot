@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Mushroom"
-run/main_scene="uid://d2ayh6pxexb34"
+run/main_scene="uid://v3na8fau766"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://dmofawo2y46hx"
 
 [display]
 

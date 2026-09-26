@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var point_1: Vector2 = Vector2(50, 50)
-@export var point_2: Vector2 = Vector2(1100, 600)
+#@export var point_1: Vector2 = Vector2(50, 50)
+#@export var point_2: Vector2 = Vector2(1100, 600)
 
 @onready var mushroom_blueprint: Resource = preload("res://scenes/mushroom_placeholder.tscn")
 
@@ -18,7 +18,7 @@ func spawn_powerup():
 	
 	add_child(mushroom_instance)
 	
-	var spawn_location: Vector2 = get_random_point_inside(point_1, point_2)
+	var spawn_location: Vector2 = get_random_point_inside(Global.point_1, Global.point_2)
 	mushroom_instance.set_position(spawn_location)
 
 # Called when the node enters the scene tree for the first time.

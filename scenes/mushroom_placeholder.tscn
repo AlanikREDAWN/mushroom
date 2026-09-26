@@ -16,4 +16,5 @@ animations = [{
 [node name="mushroomPlaceholder" type="Node2D" unique_id=158685776]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=559319672]
+modulate = Color(1, 0, 0, 1)
 sprite_frames = SubResource("SpriteFrames_k6jfe")
