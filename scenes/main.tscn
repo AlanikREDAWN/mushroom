@@ -30,10 +30,10 @@ gradient = SubResource("Gradient_o5qli")
 script = ExtResource("1_0wfyh")
 
 [node name="hard2" type="Node2D" parent="." unique_id=1646747170]
-position = Vector2(1920, 1080)
+position = Vector2(1820, 980)
 
 [node name="hard1" type="Node2D" parent="." unique_id=290099532]
-position = Vector2(-1920, -1080)
+position = Vector2(-1820, -980)
 
 [node name="hard" type="TextureRect" parent="." unique_id=642199114]
 anchors_preset = 8
@@ -50,10 +50,10 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_0wfyh")
 
 [node name="medium2" type="Node2D" parent="." unique_id=2052209189]
-position = Vector2(1440, 810)
+position = Vector2(1340, 710)
 
 [node name="medium1" type="Node2D" parent="." unique_id=827083836]
-position = Vector2(-1440, -810)
+position = Vector2(-1340, -710)
 
 [node name="medium" type="TextureRect" parent="." unique_id=395501159]
 anchors_preset = 8
@@ -69,11 +69,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_k6jfe")
 
-[node name="easy1" type="Node2D" parent="." unique_id=1845176212]
-position = Vector2(-960, -540)
-
 [node name="easy2" type="Node2D" parent="." unique_id=61594523]
-position = Vector2(960, 540)
+position = Vector2(860, 440)
+
+[node name="easy1" type="Node2D" parent="." unique_id=1845176212]
+position = Vector2(-860, -440)
 
 [node name="easy" type="TextureRect" parent="." unique_id=90499161]
 anchors_preset = 8

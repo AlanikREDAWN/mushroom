@@ -14,20 +14,24 @@ func get_random_point_inside(p1: Vector2, p2: Vector2) -> Vector2:
 	return(random_point_inside)
 
 func spawn_powerup():
-	var mushroom_instance: Node = mushroom_blueprint.instantiate()
+	#var mushroom_instance: Node = mushroom_blueprint.instantiate()
 	
 	var spawn_location: Vector2 = get_random_point_inside(Global.point_1, Global.point_2)
 	var spawn_tries = 0
 	
-	while true:
+	while spawn_tries < 5:
 		if not is_spawn_location_colliding(spawn_location):
-			add_child(mushroom_instance)
+			var mushroom_instance: Node = mushroom_blueprint.instantiate()
 			mushroom_instance.set_position(spawn_location)
+			add_child(mushroom_instance)
 			break
 			#print("error")
 		else:
 			spawn_location = get_random_point_inside(Global.point_1, Global.point_2)
 			spawn_tries += 1
+		
+		#if spawn_tries > 5:
+			#print
 	if spawn_tries > 5:
 		print("spawn tries reached")
 
