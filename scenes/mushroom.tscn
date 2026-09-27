@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://8avbawjhc7qs"]
+
+[ext_resource type="Script" uid="uid://bycp2d6enacj1" path="res://scripts/mushroom.gd" id="1_0bdi0"]
+[ext_resource type="Texture2D" uid="uid://dnoipxyc8amfg" path="res://icon.svg" id="1_b0s10"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k6jfe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b0s10")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bdi0"]
+size = Vector2(128, 128)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hg8nl"]
+radius = 150.0
+
+[node name="mushroom" type="Node2D" unique_id=158685776]
+script = ExtResource("1_0bdi0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=559319672]
+modulate = Color(1, 0, 0, 1)
+sprite_frames = SubResource("SpriteFrames_k6jfe")
+
+[node name="collision" type="Area2D" parent="." unique_id=140917234 groups=["Player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision" unique_id=447267392]
+shape = SubResource("RectangleShape2D_0bdi0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1406441482]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1833499945]
+shape = SubResource("CircleShape2D_hg8nl")
+
+[connection signal="body_entered" from="collision" to="." method="_on_collision_body_entered"]

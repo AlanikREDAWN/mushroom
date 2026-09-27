@@ -17,6 +17,10 @@ func _on_easy_pressed() -> void:
 	#Global.point_2 = Vector2(960, 540)
 	Global.point_1 = Vector2(-860, -440)
 	Global.point_2 = Vector2(860, 440)
+	Global.top_left = Vector2(-960, -540)
+	
+	Global.bottom_right = Vector2(960, 540)
+	screen_things()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 
@@ -26,6 +30,9 @@ func _on_medium_pressed() -> void:
 	#Global.point_2 = Vector2(1440, 810)
 	Global.point_1 = Vector2(-1340, -710)
 	Global.point_2 = Vector2(1340, 710)
+	Global.top_left = Vector2(-1440, -810)
+	Global.bottom_right = Vector2(1440, 810)
+	screen_things()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 
@@ -35,4 +42,13 @@ func _on_hard_pressed() -> void:
 	#Global.point_2 = Vector2(1920, 1080)
 	Global.point_1 = Vector2(-1820, -980)
 	Global.point_2 = Vector2(1820, 980)
+	Global.top_left = Vector2(-1920, -1080)
+	Global.bottom_right = Vector2(1920, 1080)
+	screen_things()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
+
+func screen_things():
+	Global.screen_size = Global.bottom_right - Global.top_left
+	Global.half_size = Global.screen_size / 2.0
+	Global.min_boundary = Global.center_point - Global.half_size
+	Global.max_boundary = Global.center_point + Global.half_size

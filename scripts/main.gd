@@ -3,7 +3,8 @@ extends Node2D
 #@export var point_1: Vector2 = Vector2(50, 50)
 #@export var point_2: Vector2 = Vector2(1100, 600)
 
-@onready var mushroom_blueprint: Resource = preload("res://scenes/mushroom_placeholder.tscn")
+@onready var mushroom_blueprint: Resource = preload("res://scenes/mushroom.tscn")
+@onready var game_timer: Timer
 
 func get_random_point_inside(p1: Vector2, p2: Vector2) -> Vector2:
 	var x_value: float = randf_range(p1.x, p2.x)
@@ -65,6 +66,7 @@ func is_spawn_location_colliding(spawn_location: Vector2) -> bool:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print(Global.screen_size)
 	randomize()
 	
 	match Global.difficulty:
@@ -77,9 +79,15 @@ func _ready() -> void:
 		Global.difficultyLevels.HARD:
 			for i in range (15):
 				spawn_powerup()
+	
+	Global.mushroom_grabbed.connect(_on_mushroom_grabbed)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("mouse"):
-		spawn_powerup()
+func _on_mushroom_grabbed():
+	Global.mushrooms_foraged += 1
+	
+#func game_start():
+	#Global.game_active = true
+	#print("GAME STARTED")
+	#game_timer = Timer.new()
+	#game_timer.name = "GameTimer"
+	#add_child()

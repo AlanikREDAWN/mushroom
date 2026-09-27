@@ -29,13 +29,29 @@ gradient = SubResource("Gradient_o5qli")
 [node name="main" type="Node2D" unique_id=1589269674]
 script = ExtResource("1_0wfyh")
 
-[node name="hard2" type="Node2D" parent="." unique_id=1646747170]
+[node name="hard" type="Node2D" parent="." unique_id=1814085347]
+
+[node name="hardBounds" type="Node2D" parent="hard" unique_id=845925245]
+
+[node name="hardRight" type="Node2D" parent="hard/hardBounds" unique_id=698633398]
+position = Vector2(1920, 0)
+
+[node name="hardLeft" type="Node2D" parent="hard/hardBounds" unique_id=1272225792]
+position = Vector2(-1920, 0)
+
+[node name="hardBottom" type="Node2D" parent="hard/hardBounds" unique_id=1237128728]
+position = Vector2(0, 1080)
+
+[node name="hardTop" type="Node2D" parent="hard/hardBounds" unique_id=429640951]
+position = Vector2(0, -1080)
+
+[node name="hard2" type="Node2D" parent="hard" unique_id=1646747170]
 position = Vector2(1820, 980)
 
-[node name="hard1" type="Node2D" parent="." unique_id=290099532]
+[node name="hard1" type="Node2D" parent="hard" unique_id=290099532]
 position = Vector2(-1820, -980)
 
-[node name="hard" type="TextureRect" parent="." unique_id=642199114]
+[node name="hardBackground" type="TextureRect" parent="hard" unique_id=642199114]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -49,13 +65,29 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_0wfyh")
 
-[node name="medium2" type="Node2D" parent="." unique_id=2052209189]
+[node name="medium" type="Node2D" parent="." unique_id=2119608894]
+
+[node name="mediumBounds" type="Node2D" parent="medium" unique_id=488890930]
+
+[node name="mediumRight" type="Node2D" parent="medium/mediumBounds" unique_id=1017612224]
+position = Vector2(1440, 0)
+
+[node name="mediumLeft" type="Node2D" parent="medium/mediumBounds" unique_id=1567113940]
+position = Vector2(-1440, 0)
+
+[node name="mediumBottom" type="Node2D" parent="medium/mediumBounds" unique_id=1967583260]
+position = Vector2(0, 810)
+
+[node name="mediumTop" type="Node2D" parent="medium/mediumBounds" unique_id=1918066324]
+position = Vector2(0, -810)
+
+[node name="medium2" type="Node2D" parent="medium" unique_id=2052209189]
 position = Vector2(1340, 710)
 
-[node name="medium1" type="Node2D" parent="." unique_id=827083836]
+[node name="medium1" type="Node2D" parent="medium" unique_id=827083836]
 position = Vector2(-1340, -710)
 
-[node name="medium" type="TextureRect" parent="." unique_id=395501159]
+[node name="mediumBackground" type="TextureRect" parent="medium" unique_id=395501159]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -69,13 +101,29 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_k6jfe")
 
-[node name="easy2" type="Node2D" parent="." unique_id=61594523]
+[node name="easy" type="Node2D" parent="." unique_id=453261747]
+
+[node name="easyBounds" type="Node2D" parent="easy" unique_id=1460088959]
+
+[node name="easyRight" type="Node2D" parent="easy/easyBounds" unique_id=219138133]
+position = Vector2(960, 0)
+
+[node name="easyLeft" type="Node2D" parent="easy/easyBounds" unique_id=2011402525]
+position = Vector2(-960, 0)
+
+[node name="easyBottom" type="Node2D" parent="easy/easyBounds" unique_id=1979006584]
+position = Vector2(0, 540)
+
+[node name="easyTop" type="Node2D" parent="easy/easyBounds" unique_id=1599433536]
+position = Vector2(0, -540)
+
+[node name="easy2" type="Node2D" parent="easy" unique_id=61594523]
 position = Vector2(860, 440)
 
-[node name="easy1" type="Node2D" parent="." unique_id=1845176212]
+[node name="easy1" type="Node2D" parent="easy" unique_id=1845176212]
 position = Vector2(-860, -440)
 
-[node name="easy" type="TextureRect" parent="." unique_id=90499161]
+[node name="easyBackground" type="TextureRect" parent="easy" unique_id=90499161]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
