@@ -13,9 +13,28 @@ func _physics_process(delta: float) -> void:
 	## Handle jump.
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
+	var velocity = Vector2.ZERO
+	
+	if Input.is_action_pressed("right"):
+		$AnimatedSprite2D.flip_h = true
+		velocity.x += 1
+	if Input.is_action_pressed("left"):
+		velocity.x -= 1
+		$AnimatedSprite2D.flip_h = false
+	if Input.is_action_pressed("down"):
+		velocity.y += 1
+	if Input.is_action_pressed("up"):
+		velocity.y -= 1
+	
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * SPEED
+		$AnimatedSprite2D.play("walk")
+	else:
+		$AnimatedSprite2D.play("sleep")
 
-	var input_direction := Input.get_vector("left", "right", "up", "down")
-	velocity = input_direction * SPEED
+	position += velocity * delta
+	#var input_direction := Input.get_vector("left", "right", "up", "down")
+	#velocity = input_direction * SPEED
 	
 	
 	

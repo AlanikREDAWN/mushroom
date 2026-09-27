@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://8avbawjhc7qs"]
 
 [ext_resource type="Script" uid="uid://bycp2d6enacj1" path="res://scripts/mushroom.gd" id="1_0bdi0"]
-[ext_resource type="Texture2D" uid="uid://dnoipxyc8amfg" path="res://icon.svg" id="1_b0s10"]
+[ext_resource type="Texture2D" uid="uid://6t1x1xsqhqn" path="res://assets/Mushroom.png" id="2_0bdi0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k6jfe"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_b0s10")
+"texture": ExtResource("2_0bdi0")
 }],
 "loop": 1,
 "name": &"default",
@@ -24,7 +24,7 @@ radius = 150.0
 script = ExtResource("1_0bdi0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=559319672]
-modulate = Color(1, 0, 0, 1)
+scale = Vector2(0.14, 0.14)
 sprite_frames = SubResource("SpriteFrames_k6jfe")
 
 [node name="collision" type="Area2D" parent="." unique_id=140917234 groups=["Player"]]

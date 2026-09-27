@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dmyxa5g6wl4oy" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://dvfl8sbv0oh57" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://ba425y5x3eq1g" path="res://scripts/camera_2d.gd" id="3_sugp2"]
 
 [sub_resource type="Gradient" id="Gradient_sugp2"]
 colors = PackedColorArray(1, 0, 0, 1, 1, 1, 1, 1)
@@ -153,3 +154,4 @@ texture = SubResource("GradientTexture1D_k6jfe")
 [node name="Player" parent="." unique_id=182767087 instance=ExtResource("1_o5qli")]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=730754029]
+script = ExtResource("3_sugp2")

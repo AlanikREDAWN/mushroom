@@ -19,3 +19,8 @@ signal mushroom_grabbed
 @onready var half_size: Vector2
 @onready var min_boundary: Vector2
 @onready var max_boundary: Vector2
+
+@onready var limit_left
+@onready var limit_top
+@onready var limit_right
+@onready var limit_bottom
